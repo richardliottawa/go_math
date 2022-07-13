@@ -4,8 +4,12 @@ import (
 	"errors"
 )
 
-func Add(a, b int) int {
-	return a + b
+func Add(args ...int) int {
+	result := 0
+	for _, val := range args {
+		result += val
+	}
+	return result
 }
 
 func Sub(a, b int) int {
